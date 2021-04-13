@@ -1,0 +1,122 @@
+$tansition-duration: 1s;
+
+.title {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.boxTitle {
+    background-color:paleturquoise;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+@media (max-width: 1024px) {
+    .title {
+        justify-content: flex-end;
+        padding-right: 35px;
+        font-size: 2em;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        transition-duration: $tansition-duration;
+        transition-property: transform;
+        transition-timing-function: linear;
+        transform: translateX(0) translateY(0);
+        transform-origin: center right;
+
+        &.open {
+            transform: translateX(-22%) translateY(-17%);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 5px;
+        height: 100%;
+        width: 100%;
+        font-size: 2em;
+
+        transition-duration: $tansition-duration;
+        transition-property: transform;
+        transition-timing-function: linear;
+        transform: translateX(0) translateY(0);
+        transform-origin: center right;
+
+        &.open {
+            transform: translateX(-22%) translateY(-17%);
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .title {
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 5px;
+        height: 100%;
+        width: 100%;
+        font-size: 1.2em;
+
+        transition-duration: $tansition-duration;
+        transition-property: transform;
+        transition-timing-function: linear;
+        transform: translateX(0) translateY(0);
+        transform-origin: center right;
+
+        &.open {
+            transform: translateX(-20%) translateY(-17%);
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 5px;
+        height: 100%;
+        width: 100%;
+        font-size: 1.2em;
+
+        transition-duration: $tansition-duration;
+        transition-property: transform;
+        transition-timing-function: linear;
+        transform: translateX(0) translateY(0);
+        transform-origin: center right;
+
+        &.open {
+            transform: translateX(-12%) translateY(-17%);
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 5px;
+        height: 100%;
+        width: 100%;
+        font-size: 1.2em;
+
+        transition-duration: $tansition-duration;
+        transition-property: transform;
+        transition-timing-function: linear;
+        transform: translateX(0) translateY(0);
+        transform-origin: center right;
+
+        &.open {
+            transform: translateX(-8%) translateY(-17%);
+        }
+    }
+}

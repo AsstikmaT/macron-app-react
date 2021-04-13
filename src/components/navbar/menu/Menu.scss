@@ -1,0 +1,624 @@
+$tansition-duration: .5s;
+
+.menuMain {
+    height: 100%;
+    width: 100%;
+    background-color: orangered;
+}
+
+.menuDesktop {
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.titleDesktop {
+    height: 100%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuesDesktop {
+    height: 100%;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menues {
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25em;
+
+    transform: scale(1);
+    transition-duration: $tansition-duration;
+    transition-property: transform;
+    transition-timing-function: linear;
+
+    &:hover {
+        transform: scale(1.2);;
+    }
+}
+
+.menuResponsive {
+    display: none;
+}
+
+.button {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .menuMain {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .menuResponsive {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+        font-size: 1.5em;
+        pointer-events: none;
+        position: absolute;
+        
+        > div {
+            pointer-events: all;
+            position: absolute;
+            transition-duration: $tansition-duration;
+            transition-property: transform;
+            transition-timing-function: linear;
+
+            &.background {
+                background-color: rgba(255, 217, 0, 0.482);
+                height: 100%;
+                transform: translateX(-100%);
+                width: 100%;
+            }
+
+            &.menuBurger {
+                background-color: rgb(0, 255, 187);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 30%;
+                transform: translateX(-100%);
+                width: 100%;
+
+                > * {
+                    display: flex;
+                }
+
+                > .menuItem {
+                    align-items: center;
+                    height: 40px;
+                    justify-content: center;
+                }
+            }
+
+            &.background {
+                &.open {
+                    transition-delay: $tansition-duration;
+                    transition-duration: 1s;
+                    transform: translateX(0);
+                } 
+            }
+
+
+            &.menuBurger {
+                &.open {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: 15px;
+            left:  15px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .burger {
+        width: 100%;
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &.midBurger {
+        transform: scale(1);
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: scale(0);
+        }
+    }
+
+    &.topBurger{
+        transform: rotate(0deg) scaleX(1);
+        transform-origin: top left;
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: rotate(45deg) scaleX(1.42);
+        }
+    }
+
+    &.bottomBurger {
+        transform: rotate(0deg) scaleX(1);
+        transform-origin: bottom left;
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: rotate(-45deg) scaleX(1.42);
+        }
+    }
+
+    .menuDesktop {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .menuMain {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .menuResponsive {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+        font-size: 1.5em;
+        pointer-events: none;
+        position: absolute;
+        
+        > div {
+            pointer-events: all;
+            position: absolute;
+            transition-duration: $tansition-duration;
+            transition-property: transform;
+            transition-timing-function: linear;
+
+            &.background {
+                background-color: rgba(255, 217, 0, 0.482);
+                height: 100%;
+                transform: translateX(-100%);
+                width: 100%;
+            }
+
+            &.menuBurger {
+                background-color: rgb(0, 255, 187);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                height: 30%;
+                transform: translateX(-100%);
+                width: 100%;
+
+                > * {
+                    display: flex;
+                }
+
+                > .menuItem {
+                    align-items: center;
+                    height: 40px;
+                    justify-content: center;
+                }
+            }
+
+            &.background {
+                &.open {
+                    transition-delay: $tansition-duration;
+                    transition-duration: 1s;
+                    transform: translateX(0);
+                } 
+            }
+
+
+            &.menuBurger {
+                &.open {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: 15px;
+            left:  15px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .burger {
+        width: 100%;
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &.midBurger {
+        transform: scale(1);
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: scale(0);
+        }
+    }
+
+    &.topBurger{
+        transform: rotate(0deg) scaleX(1);
+        transform-origin: top left;
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: rotate(45deg) scaleX(1.42);
+        }
+    }
+
+    &.bottomBurger {
+        transform: rotate(0deg) scaleX(1);
+        transform-origin: bottom left;
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: rotate(-45deg) scaleX(1.42);
+        }
+    }
+
+    .menuDesktop {
+        display: none;
+    }
+}
+
+@media (max-width: 414px) {
+    .menuMain {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .menuResponsive {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+        font-size: 1em;
+        pointer-events: none;
+        position: absolute;
+        
+        > div {
+            pointer-events: all;
+            position: absolute;
+            transition-duration: $tansition-duration;
+            transition-property: transform;
+            transition-timing-function: linear;
+
+            &.background {
+                background-color: rgba(255, 217, 0, 0.482);
+                height: 100%;
+                transform: translateX(-100%);
+                width: 100%;
+            }
+
+            &.menuBurger {
+                background-color: rgb(0, 255, 187);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                height: 30%;
+                transform: translateX(-100%);
+                width: 100%;
+
+                > * {
+                    display: flex;
+                }
+
+                > .menuItem {
+                    align-items: center;
+                    height: 40px;
+                    justify-content: center;
+                }
+            }
+
+            &.background {
+                &.open {
+                    transition-delay: $tansition-duration;
+                    transition-duration: 1s;
+                    transform: translateX(0);
+                } 
+            }
+
+
+            &.menuBurger {
+                &.open {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: 15px;
+            left:  15px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .burger {
+        width: 100%;
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &.midBurger {
+        transform: scale(1);
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: scale(0);
+        }
+    }
+
+    &.topBurger{
+        transform: rotate(0deg) scaleX(1);
+        transform-origin: top left;
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: rotate(45deg) scaleX(1.42);
+        }
+    }
+
+    &.bottomBurger {
+        transform: rotate(0deg) scaleX(1);
+        transform-origin: bottom left;
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: rotate(-45deg) scaleX(1.42);
+        }
+    }
+
+    .menuDesktop {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .menuMain {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .menuResponsive {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+        font-size: 1em;
+        pointer-events: none;
+        position: absolute;
+        
+        > div {
+            pointer-events: all;
+            position: absolute;
+            transition-duration: $tansition-duration;
+            transition-property: transform;
+            transition-timing-function: linear;
+
+            &.background {
+                background-color: rgba(255, 217, 0, 0.482);
+                height: 100%;
+                transform: translateX(-100%);
+                width: 100%;
+            }
+
+            &.menuBurger {
+                background-color: rgb(0, 255, 187);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                height: 30%;
+                transform: translateX(-100%);
+                width: 100%;
+
+                > * {
+                    display: flex;
+                }
+
+                > .menuItem {
+                    align-items: center;
+                    height: 40px;
+                    justify-content: center;
+                }
+            }
+
+            &.background {
+                &.open {
+                    transition-delay: $tansition-duration;
+                    transition-duration: 1s;
+                    transform: translateX(0);
+                } 
+            }
+
+
+            &.menuBurger {
+                &.open {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: 6px;
+            left:  10px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .burger {
+        width: 100%;
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &.midBurger {
+        transform: scale(1);
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: scale(0);
+        }
+    }
+
+    &.topBurger{
+        transform: rotate(0deg) scaleX(1);
+        transform-origin: top left;
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: rotate(45deg) scaleX(1.42);
+        }
+    }
+
+    &.bottomBurger {
+        transform: rotate(0deg) scaleX(1);
+        transform-origin: bottom left;
+        transition-timing-function: linear;
+        transition-delay: $tansition-duration;
+        transition-duration: $tansition-duration;
+
+        background-color: black;
+        border-radius: 4px;
+        width: 30px;
+        height: 8px;
+
+        &.open {
+            transform: rotate(-45deg) scaleX(1.42);
+        }
+    }
+
+    .menuDesktop {
+        display: none;
+    }
+}

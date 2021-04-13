@@ -1,0 +1,47 @@
+.navbar {
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+}
+
+.subNavbarDesktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.subNavbarResponsive {
+    display: none;  
+}
+
+@media (max-width: 1024px) {
+
+    .subNavbarDesktop {
+        display: none;
+    }
+    
+    .subNavbarResponsive {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .subNavbarDesktop {
+        display: none;
+    }
+    
+    .subNavbarResponsive {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+}

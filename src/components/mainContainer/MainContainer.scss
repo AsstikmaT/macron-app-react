@@ -1,0 +1,96 @@
+.mainContainer {
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+}
+
+.subMainContainer {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: palevioletred;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    >:nth-child(1) {
+        height: 100%;
+        width: 50%;
+    }
+
+    >:nth-child(2) {
+        height: 100%;
+        width: 50%;
+    }
+
+    >:nth-child(3) {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px){
+    .mainContainer {
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+        background-color: palevioletred;
+        overflow-y: auto;
+    }
+
+    .subMainContainer {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        justify-content: center;
+
+        >:nth-child(1) {
+            height: 100%;
+            width: 100%;
+        }
+    
+        >:nth-child(2) {
+            height: 100%;
+            width: 100%;
+        }
+    
+        >:nth-child(3) {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .mainContainer {
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+        background-color: palevioletred;
+        overflow-y: auto;
+    }
+
+    .subMainContainer {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+
+        >:nth-child(1) {
+            height: 100%;
+            width: 100%;
+        }
+    
+        >:nth-child(2) {
+            height: 100%;
+            width: 100%;
+        }
+    
+        >:nth-child(3) {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
