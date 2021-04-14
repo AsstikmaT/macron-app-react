@@ -1,5 +1,12 @@
 $tansition-duration: 1s;
 
+.boxTitle {
+    background-color:rgb(210, 255, 255);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
 .title {
     justify-content: center;
     align-items: center;
@@ -9,18 +16,9 @@ $tansition-duration: 1s;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.boxTitle {
-    background-color:paleturquoise;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
 @media (max-width: 1024px) {
     .title {
         justify-content: flex-end;
-        padding-right: 35px;
-        font-size: 2em;
         align-items: center;
         height: 100%;
         width: 100%;
@@ -41,7 +39,6 @@ $tansition-duration: 1s;
     .title {
         justify-content: flex-end;
         align-items: center;
-        padding-right: 5px;
         height: 100%;
         width: 100%;
         font-size: 2em;
@@ -58,11 +55,30 @@ $tansition-duration: 1s;
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 600px) {
     .title {
         justify-content: flex-end;
         align-items: center;
-        padding-right: 5px;
+        height: 100%;
+        width: 100%;
+        font-size: 1.5em;
+
+        transition-duration: $tansition-duration;
+        transition-property: transform;
+        transition-timing-function: linear;
+        transform: translateX(0) translateY(0);
+        transform-origin: center right;
+
+        &.open {
+            transform: translateX(-20%) translateY(-17%);
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .title {
+        justify-content: flex-end;
+        align-items: center;
         height: 100%;
         width: 100%;
         font-size: 1.2em;
@@ -83,7 +99,6 @@ $tansition-duration: 1s;
     .title {
         justify-content: flex-end;
         align-items: center;
-        padding-right: 5px;
         height: 100%;
         width: 100%;
         font-size: 1.2em;
@@ -104,10 +119,9 @@ $tansition-duration: 1s;
     .title {
         justify-content: flex-end;
         align-items: center;
-        padding-right: 5px;
         height: 100%;
         width: 100%;
-        font-size: 1.2em;
+        font-size: 1.1em;
 
         transition-duration: $tansition-duration;
         transition-property: transform;
