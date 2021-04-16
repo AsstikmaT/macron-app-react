@@ -1,5 +1,7 @@
 import './Containers.scss';
 
+import React from 'react';
+
 import funnyMacron from "./funnyMacron.png";
 
 const Containers = () => {

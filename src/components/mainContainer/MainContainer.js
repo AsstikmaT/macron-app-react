@@ -8,7 +8,7 @@ import Footer from "../footer/Footer";
 const MainContainer = () => {
   return (
     <div className="mainContainer">
-      <div className="subMainContainer">
+      <div className="subMainContainerResponsive">
         <Image />
         <Containers />
         <Footer />
